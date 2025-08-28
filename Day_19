@@ -1,0 +1,84 @@
+📘 Day 19 – Challenge: Factorial of a Number
+
+
+---
+
+🏆 Main Challenge: Compute Factorial
+
+// Input: n
+let n = 5;
+
+// Step 1: Create a variable to store result
+let factorial = 1;
+
+// Step 2: Multiply numbers from 1 to n
+for (let i = 1; i <= n; i++) {
+  factorial = factorial * i;
+}
+
+// Step 3: Print the result
+console.log(factorial); // Output: 120 (5! = 5 × 4 × 3 × 2 × 1)
+
+👉 Kid-style explanation:
+Imagine you are stacking chairs 🪑.
+On Day 1 → 1 chair, Day 2 → 2 chairs on top, Day 3 → 3 chairs, … until Day N.
+At the end → you see how many different ways you can stack them → that’s factorial! 🎉
+
+
+---
+
+📝 Assignment 1: Total Combinations
+
+let n = 4;
+let fact = 1;
+
+for (let i = 1; i <= n; i++) {
+  fact = fact * i;
+}
+
+console.log(fact); // Output: 24
+
+👉 If you have 4 toys, how many different ways can you arrange them? → 24 ways!
+
+
+---
+
+📝 Assignment 2: Factorial of Daily Sales
+
+let sales = [2, 3, 4];
+let factorials = [];
+
+// Helper function to compute factorial
+function getFactorial(num) {
+  let f = 1;
+  for (let i = 1; i <= num; i++) {
+    f = f * i;
+  }
+  return f;
+}
+
+// Loop through sales
+for (let i = 0; i < sales.length; i++) {
+  factorials.push(getFactorial(sales[i]));
+}
+
+console.log(factorials); // Output: [2, 6, 24]
+
+👉 Day 1 you sold 2 → 2! = 2
+Day 2 you sold 3 → 3! = 6
+Day 3 you sold 4 → 4! = 24
+So output = [2, 6, 24]
+
+
+---
+
+📝 Assignment 3: Product of Order Quantities
+
+let order_quantity = 6;
+let result = 1;
+
+for (let i = 1; i <= order_quantity; i++) {
+  result = result * i;
+}
+
+console.log(result); // Output: 720
