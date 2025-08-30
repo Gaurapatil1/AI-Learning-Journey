@@ -1,0 +1,98 @@
+
+
+📘 Day 20 – Challenge: Detecting Duplicates
+
+
+
+🏆 Main Challenge: Check for Duplicates
+
+let numbers = [1, 2, 3, 4, 5, 1];
+
+// Use a Set to check uniqueness
+let hasDuplicate = new Set(numbers).size !== numbers.length;
+
+if (hasDuplicate) {
+  console.log("Duplicates found");
+} else {
+  console.log("No duplicates");
+}
+// Output: "Duplicates found"
+
+👉 Kid-style explanation:
+Think of giving every student in class a roll number 🎒.
+
+If two kids get the same roll number ➝ 🚨 duplicate!
+
+If everyone has a unique roll number ➝ ✅ no duplicates.
+
+
+
+---
+
+📝 Assignment 1: Check for Duplicate Orders
+
+let orders = [101, 102, 103, 104, 101];
+
+let hasDuplicateOrders = new Set(orders).size !== orders.length;
+
+console.log(hasDuplicateOrders ? "Duplicates found" : "No duplicates");
+// Output: "Duplicates found"
+
+👉 Order IDs should always be unique—if two customers get the same ID, chaos! 🧾
+
+
+---
+
+📝 Assignment 2: Duplicate Items in Shopping Cart
+
+let cart = ["Rice", "Dal", "Oil", "Rice"];
+
+let hasDuplicateItems = new Set(cart).size !== cart.length;
+
+console.log(hasDuplicateItems ? "Duplicates found" : "No duplicates");
+// Output: "Duplicates found"
+
+👉 Imagine a cart where you accidentally add Rice twice—that’s a duplicate 🛒.
+
+
+---
+
+📝 Assignment 3: Duplicate Numbers in Weekly Sales
+
+let weekly_sales = [5000, 6000, 7000, 5000, 8000];
+
+let hasDuplicateSales = new Set(weekly_sales).size !== weekly_sales.length;
+
+console.log(hasDuplicateSales ? "Duplicates found" : "No duplicates");
+// Output: "Duplicates found"
+
+👉 If sales on Monday and Thursday are both ₹5000, then it’s a duplicate 📊.
+
+
+---
+
+✨ Summary (Day 11):
+
+Duplicates = repeated values in a list.
+
+Easy trick → Convert to Set and compare size with original list.
+
+Useful in orders 🧾, shopping carts 🛒, weekly sales 📈, or student IDs 🎓.
+
+
+
+---
+
+⚡ Pro Tip: You can also count duplicates:
+
+let arr = [1, 2, 2, 3, 4, 4, 4];
+let count = {};
+
+arr.forEach(num => count[num] = (count[num] || 0) + 1);
+
+console.log(count); // { '1': 1, '2': 2, '3': 1, '4': 3 }
+
+👉 This not only detects duplicates but also tells you how many times they occur!
+
+
+
